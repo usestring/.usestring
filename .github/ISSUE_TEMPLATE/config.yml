@@ -1,0 +1,20 @@
+# Keep blank issues available — not every report fits a form, and forcing one
+# produces worse issues than allowing a free-form description.
+blank_issues_enabled: true
+
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/usestring/.github/blob/main/SECURITY.md
+    about: Do not file publicly. Email support@usestring.ai — see the policy for what to include.
+
+  - name: API, account, quota, or billing question
+    url: mailto:support@usestring.ai
+    about: Anything involving your API key or a specific failing request. Never paste a key into a public issue.
+
+  - name: Documentation
+    url: https://portal.usestring.ai/docs
+    about: Web Access API reference and quickstart.
+
+  - name: Web Access API benchmark
+    url: https://github.com/usestring/web-data-frontier-benchmark
+    about: Provider comparison results, methodology, and how to re-run the suite yourself.

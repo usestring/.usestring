@@ -1,0 +1,53 @@
+name: Feature request
+description: Propose a change or addition before writing the code
+title: "[feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For a **bug fix**, skip this and just send the PR — no issue needed.
+
+        This form is for anything larger: a new feature, a new dependency, a refactor. Some of these
+        repos have constraints that aren't visible from outside (a provider's rate limits, a
+        fingerprint that breaks if header order changes), so it's worth a short conversation before
+        you spend a weekend on it.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: >
+        What are you actually trying to do, and where does the current behaviour get in the way?
+        Describe the problem rather than the solution — it often changes what the right fix is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you'd like to happen
+      description: Your proposed change. Rough is fine.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+      description: >
+        Including workarounds you're using today. If you tried something and it didn't work, that's
+        useful — it saves us suggesting it back to you.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: willing-to-implement
+    attributes:
+      label: Would you want to implement this?
+      description: No wrong answer — it just tells us whether to scope for a review or for our own queue.
+      options:
+        - "Yes, if the approach is agreed"
+        - "Maybe, with some guidance"
+        - "No, just proposing it"
+    validations:
+      required: false
