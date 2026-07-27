@@ -1,0 +1,59 @@
+name: Bug report
+description: Something in this repository doesn't work the way it should
+title: "[bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **If this is a security vulnerability, stop and email support@usestring.ai instead** —
+        see [SECURITY.md](https://github.com/usestring/.github/blob/main/SECURITY.md).
+
+        **Never paste an API key, request log, or account detail into a public issue.** For anything
+        involving your account, quota, or a specific failing request against the hosted API, email
+        support@usestring.ai instead.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: >
+        The smallest thing that demonstrates the problem — commands, a code snippet, or a target URL.
+        Redact keys.
+      render: shell
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Release tag, npm version, or commit SHA. "main" is fine if you're on the tip.
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS and runtime version (Node, Bun, Go) where it matters.
+      placeholder: macOS 15.1, Node 22.9
+    validations:
+      required: false
+
+  - type: textarea
+    id: anything-else
+    attributes:
+      label: Anything else
+      description: >
+        Logs, stack traces, what you already tried and ruled out. If it's intermittent, say roughly
+        how often.
+    validations:
+      required: false
